@@ -1,0 +1,105 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            clifford: '#da373d',
+            ayo: '#tdyjhgh'
+          }
+        }
+      }
+    }
+  </script>
+</head>
+<body>
+    <div>
+        <div id="backgoundPic" class="bg-[url('https://cdn.pixabay.com/photo/2018/07/05/16/59/students-3518726_1280.jpg')] w=[580px] h-[585px] bg-cover bg-no-repeat bg-center ">
+            <div class="pt-[110px] text-center ">
+                <p class="text-blue-500 font-bold text-8xl font-mono">KIDS </p>
+                <p class="text-green-500 font-bold text-8xl font-mono">LEARNING</p>
+                <button id="btn" class="bg-purple-500 text-white font-bold py-[10px] px-[20px] mt-[70px] rounded-[20px] font-mono	">LET'S PLAY</button>
+            </div>
+        </div>
+        <div id="instruction" class="text-center  hidden py-[150px] bg-gradient-to-r from-cyan-500 to-blue-500 h-[584px] text-white">
+            <p class="mb-[50px] font-bold text-2xl	"><u>INSTRUCTION</u></p>
+            <p class="mb-[10px]">
+               1. Image is shown: eg, an image of a bat is displayed, and all the alphabets are shown on the screen for you to click on them to spell the word
+            </p>
+            <p class="mb-[10px]">
+               2. If the spelt word is incorrect, you have 1 minute to correct yourself before the image fades away to display the next image.
+            </p>
+            <p class="mb-[17px]">
+               3. After the slideshow,your spelling report will be displayed, to show how well, or bad you did.
+            </p>
+            <p class="py-[30px]">GOODLUCK.</p>
+        </div>
+        <div id="mainGame" class="hidden p-[40px] bg-gradient-to-r from-cyan-300 to-blue-500 ">
+            <div class="flex gap-[200px]">
+                <div>
+                    <div class="flex gap-2 mb-[4px]">
+                        <p><b>TIME:</b></p>
+                        <p id="timer"> 00:00 </p>
+                    </div>
+                    <div class="relative">
+                        <img id="image1" class=" h-[500px] w-[500px] " src="" alt="brokenIMG">
+                    </div>
+                </div>
+                <div>
+                    <div class="flex justify-end">
+                        <p class="feedback" id="feedback"></p>
+                    </div>
+                    <div class="mt-[29px]">
+                       <textarea readonly class="py-[20px] px-[100px]  border-black" name="" id="textarea"></textarea>
+                    </div>
+                    <div class="mt-4">
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl " onclick="clickToShow('P')">P</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('O')">O</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('I')">I</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('U')">U</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('Y')">Y</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('T')">T</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('R')">R</button>
+                    </div>
+                    <div class="mt-4">
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl" onclick="clickToShow('E')">E</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('W')">W</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('Q')">Q</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('A')">A</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('S')">S</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('D')">D</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('F')">F</button>
+                    </div>
+                    <div class="mt-4">
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl " onclick="clickToShow('G')">G</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('H')">H</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('J')">J</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('K')">K</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('L')">L</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('M')">M</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('N')">N</button>
+                    </div>
+                    <div class="mt-4">
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl" onclick="clickToShow('Z')">Z</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('X')">X</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('C')">C</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('V')">V</button>
+                        <button class="bg-gray-500 p-[12px] rounded-[5px] shadow-2xl ml-[15px]" onclick="clickToShow('B')">B</button>
+                    </div>
+                    <div class="mt-4">
+                        <button id="delete" class="bg-gray-500 p-[5px] rounded-[5px] shadow-2xl">DELETE</button>
+                        <button onclick="checkAnswer()" id="enter" class="bg-gray-500 p-[5px] rounded-[5px] shadow-2xl ml-[15px]">SUBMIT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
